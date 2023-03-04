@@ -19,7 +19,7 @@
  '(jdee-db-spec-breakpoint-face-colors (cons "#3d434d" "#171b24"))
  '(objed-cursor-color "#f28779")
  '(package-selected-packages
-   '(autumn-light-theme ubuntu-theme nano-theme vs-light-theme jazz-theme solo-jazz-theme git-lens github-theme highlight-numbers vscode-dark-plus-theme vscode-icon lsp-treemacs flycheck-dialyxir lsp-ui flycheck-elixir flycheck elixir-mode vdiff-magit vdiff))
+   '(flyspell-correct autumn-light-theme ubuntu-theme nano-theme vs-light-theme jazz-theme solo-jazz-theme git-lens github-theme highlight-numbers vscode-dark-plus-theme vscode-icon lsp-treemacs flycheck-dialyxir lsp-ui flycheck-elixir flycheck elixir-mode vdiff-magit vdiff))
  '(pdf-view-midnight-colors (cons "#cbccc6" "#1f2430"))
  '(rustic-ansi-faces
    ["#1f2430" "#f28779" "#bae67e" "#ffd580" "#73d0ff" "#d4bfff" "#5ccfe6" "#cbccc6"])
