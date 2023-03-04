@@ -69,7 +69,7 @@
 
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (add-to-list 'default-frame-alist '(width . 210))
-(add-to-list 'default-frame-alist '(height . 65))
+(add-to-list 'default-frame-alist '(height . 68))
 
 (defun elixir-append-inspect()
   (interactive)
