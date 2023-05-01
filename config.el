@@ -46,14 +46,26 @@
                                      :json-false))))
              (lsp--set-configuration config)))))))
 
-;; Enable LSP UI documentation
+;; Configure LSP-ui to define when and how to display informations.
 (after! lsp-ui
-  (setq lsp-ui-doc-enable t))
+  (setq lsp-ui-doc-max-height 20
+        lsp-ui-doc-max-width 80
+        lsp-ui-sideline-ignore-duplicate t
+        lsp-ui-doc-header t
+        lsp-ui-doc-include-signature t
+        lsp-ui-doc-position 'bottom
+        lsp-ui-doc-use-webkit nil
+        lsp-ui-flycheck-enable t
+        lsp-ui-imenu-kind-position 'left
+        lsp-ui-sideline-code-actions-prefix "💡"
+        ;; fix for completing candidates not showing after “Enum.”:
+        company-lsp-match-candidate-predicate #'company-lsp-match-candidate-prefix
+        ))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+;; (setq doom-theme 'solo-jazz)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -147,3 +159,4 @@
                                         ("bug" . "There is a bug in the following function, please help me fix it.\n\n%s")
                                         ("understand" . "What does the following function do?\n\n%s")
                                         ("improve" . "Please improve the following code.\n\n%s")))
+
