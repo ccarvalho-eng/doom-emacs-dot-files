@@ -56,7 +56,11 @@
 ;; -----------------------------------------------------------------------------
 ;; LSP configuration
 ;; -----------------------------------------------------------------------------
-(after! lsp-clients
+(use-package! lsp-mode
+  :commands lsp
+  :init
+  (setq lsp-keymap-prefix "C-c l") ; Set prefix for lsp-command-keymap
+  :config
   ;; Elixir LSP
   (lsp-register-client
    (make-lsp-client :new-connection
@@ -73,19 +77,42 @@
                                                                  :dialyzerEnabled
                                                                  :json-false))))
                                           (lsp--set-configuration config)))))))
-  ;; LSP UI
-  (after! lsp-ui
-    (setq lsp-ui-doc-max-height 20
-          lsp-ui-doc-max-width 80
-          lsp-ui-sideline-ignore-duplicate t
-          lsp-ui-doc-header t
-          lsp-ui-doc-include-signature t
-          lsp-ui-doc-position 'bottom
-          lsp-ui-doc-use-webkit nil
-          lsp-ui-flycheck-enable t
-          lsp-ui-imenu-kind-position 'left
-          lsp-ui-sideline-code-actions-prefix "💡"
-          company-lsp-match-candidate-predicate #'company-lsp-match-candidate-prefix))
+
+  (setq lsp-enable-file-watchers nil
+        lsp-enable-text-document-color nil
+        lsp-enable-on-type-formatting nil
+        lsp-enable-symbol-highlighting nil
+        lsp-modeline-code-actions-enable nil
+        lsp-modeline-diagnostics-enable nil
+        lsp-headerline-breadcrumb-enable nil
+        lsp-lens-enable nil)
+
+(use-package! lsp-ui
+  :commands lsp-ui-mode
+  :config
+  (setq lsp-ui-doc-max-height 20
+        lsp-ui-doc-max-width 80
+        lsp-ui-sideline-ignore-duplicate t
+        lsp-ui-doc-header t
+        lsp-ui-doc-include-signature t
+        lsp-ui-doc-position 'bottom
+        lsp-ui-doc-use-webkit nil
+        lsp-ui-flycheck-enable t
+        lsp-ui-imenu-kind-position 'left
+        lsp-ui-sideline-code-actions-prefix "💡"
+        company-lsp-match-candidate-predicate #'company-lsp-match-candidate-prefix))
+
+(use-package! lsp-elixir
+  :defer t
+  :hook (elixir-mode . lsp))
+
+;; -----------------------------------------------------------------------------
+;; Optional: lsp-treemacs integration
+;; -----------------------------------------------------------------------------
+(use-package! lsp-treemacs
+  :commands lsp-treemacs-errors-list
+  :config
+  (lsp-treemacs-sync-mode 1))
 
 ;; -----------------------------------------------------------------------------
 ;; Folding configuration
