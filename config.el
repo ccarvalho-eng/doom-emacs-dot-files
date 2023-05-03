@@ -148,26 +148,3 @@
 ;; -----------------------------------------------------------------------------
 (doom-themes-neotree-config)
 (setq doom-themes-neotree-file-icons t)
-
-;; -----------------------------------------------------------------------------
-;; ChatGPT configuration
-;; -----------------------------------------------------------------------------
-(use-package! chatgpt
-  :defer t
-  :config
-  (unless (boundp 'python-interpreter)
-    (defvaralias 'python-interpreter 'python-shell-interpreter))
-  (setq chatgpt-repo-path (expand-file-name "straight/repos/ChatGPT.el/" doom-local-dir))
-  (set-popup-rule! (regexp-quote "*ChatGPT*")
-    :side 'bottom :size .5 :ttl nil :quit t :modeline nil)
-  :bind ("C-c q" . chatgpt-query))
-
-;; -----------------------------------------------------------------------------
-;; ChatGPT format string map
-;; -----------------------------------------------------------------------------
-(setq chatgpt-query-format-string-map '(
-                                        ;; ChatGPT.el defaults
-                                        ("doc" . "Please write the documentation for the following function.\n\n%s")
-                                        ("bug" . "There is a bug in the following function, please help me fix it.\n\n%s")
-                                        ("understand" . "What does the following function do?\n\n%s")
-                                        ("improve" . "Please improve the following code.\n\n%s")))
