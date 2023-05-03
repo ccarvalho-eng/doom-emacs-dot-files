@@ -146,5 +146,35 @@
 ;; -----------------------------------------------------------------------------
 ;; Neotree configuration
 ;; -----------------------------------------------------------------------------
-(doom-themes-neotree-config)
-(setq doom-themes-neotree-file-icons t)
+;; -----------------------------------------------------------------------------
+;; Neotree configuration
+;; -----------------------------------------------------------------------------
+;; -----------------------------------------------------------------------------
+;; Neotree configuration
+;; -----------------------------------------------------------------------------
+(use-package! neotree
+  :defer t
+  :config
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (setq neo-smart-open t)
+  (setq neo-window-width 30)
+  (setq neo-window-fixed-size nil)
+  (setq neo-mode-line-type 'neotree)
+  (setq neo-show-hidden-files t)
+  (setq neo-create-file-auto-open t)
+  (setq neo-banner-message nil)
+  (setq neo-auto-indent-point t)
+  (setq neo-keymap-style 'concise)
+  (doom-themes-neotree-config)
+  (setq doom-themes-neotree-file-icons t)
+  (setq neo-show-updir-line nil))
+
+;; Automatically resize Neotree window
+(add-hook 'neo-after-create-hook
+          (lambda (_)
+            (let ((fit-window-to-buffer-horizontally t))
+              (neo-buffer--with-resizable-window
+               (fit-window-to-buffer)))))
+
+;; Neotree keybindings
+(map! :n "<f8>" #'neotree-toggle)
