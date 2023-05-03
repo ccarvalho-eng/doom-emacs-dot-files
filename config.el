@@ -7,8 +7,34 @@
 ;; User configuration
 ;; -----------------------------------------------------------------------------
 (setq user-full-name "Cristiano Carvalho"
-      user-mail-address "cristiano.dev@icloud.com"
-      projectile-project-search-path '("~/Projects"))
+      user-mail-address "cristiano.dev@icloud.com")
+
+;; Projectile configuration
+(use-package! projectile
+  :config
+  (setq projectile-project-search-path '("~/Projects")
+        projectile-enable-caching t
+        projectile-indexing-method 'alien
+        projectile-sort-order 'recentf
+        projectile-completion-system 'ivy)
+  (projectile-mode +1))
+
+;; Recent files configuration
+(use-package! recentf
+  :config
+  (setq recentf-max-saved-items 50
+        recentf-max-menu-items 15
+        recentf-auto-cleanup 'never
+        recentf-exclude '(".gz" ".xz" ".zip" ".zst"))
+  (recentf-mode +1))
+
+;; Savehist configuration
+(use-package! savehist
+  :config
+  (setq savehist-file (concat doom-cache-dir "savehist")
+        savehist-additional-variables '(search-ring regexp-search-ring)
+        savehist-autosave-interval 60)
+  (savehist-mode +1))
 
 ;; -----------------------------------------------------------------------------
 ;; Fonts
