@@ -96,13 +96,27 @@
 ;; Configure exunit
 (use-package! exunit)
 
+;; Configure mix commands to run in the project root directory
+(defun my-elixir-mix-credo ()
+  (interactive)
+  (let ((default-directory (projectile-project-root)))
+    (compile "mix credo")))
+
+(defun my-elixir-mix-dialyzer ()
+  (interactive)
+  (let ((default-directory (projectile-project-root)))
+    (compile "mix dialyzer")))
+
+
 ;; Setup some keybindings for exunit and lsp-ui
 (map! :mode elixir-mode
       :leader
-      :desc "Sort Lines" :nve  "l"    #'sort-lines
-      :desc "iMenu" :nve  "c/"    #'lsp-ui-imenu
-      :desc "Toggle Test" :nve  "cT"    #'exunit-toggle-file-and-test
-      :desc "Inspect" :nve  "cI"    #'elixir-append-inspect)
+      :desc "Sort Lines" :nve "l" #'sort-lines
+      :desc "iMenu" :nve "c/" #'lsp-ui-imenu
+      :desc "Toggle Test" :nve "cT" #'exunit-toggle-file-and-test
+      :desc "Inspect" :nve "cI" #'elixir-append-inspect
+      :desc "Mix Credo" :nve "mc" #'my-elixir-mix-credo
+      :desc "Mix Dialyzer" :nve "md" #'my-elixir-mix-dialyzer)
 
 (after! lsp-mode
   (dolist (match
