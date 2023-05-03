@@ -107,7 +107,6 @@
   (let ((default-directory (projectile-project-root)))
     (compile "mix dialyzer")))
 
-
 ;; Setup some keybindings for exunit and lsp-ui
 (map! :mode elixir-mode
       :leader
