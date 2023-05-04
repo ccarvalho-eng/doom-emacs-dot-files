@@ -44,7 +44,38 @@
 ;; -----------------------------------------------------------------------------
 ;; Theme
 ;; -----------------------------------------------------------------------------
-(setq doom-theme 'doom-one)
+(defvar my-current-theme 'doom-one
+  "Current theme being used in Emacs.")
+
+(defvar my-light-theme 'doom-solarized-light
+  "Light theme to use during daytime.")
+
+(defvar my-dark-theme 'doom-one
+  "Dark theme to use during nighttime.")
+
+(defun my-set-theme (theme)
+  "Set the current THEME in Emacs."
+  (when (member theme '(doom-one doom-solarized-light))
+    (disable-theme my-current-theme)
+    (load-theme theme t)
+    (setq my-current-theme theme)
+    (message "Switched to theme: %s" theme)))
+
+(defun switch-dark-mode ()
+  "Toggle between light and dark themes."
+  (interactive)
+  (if (eq my-current-theme my-light-theme)
+      (my-set-theme my-dark-theme)
+    (my-set-theme my-light-theme)))
+
+(defun my-set-theme-for-time-of-day ()
+  "Set the theme based on the time of day."
+  (let ((hour (string-to-number (format-time-string "%H"))))
+    (if (and (>= hour 6) (<= hour 18))
+        (my-set-theme my-light-theme)
+      (my-set-theme my-dark-theme))))
+
+(my-set-theme-for-time-of-day)
 
 ;; -----------------------------------------------------------------------------
 ;; Org configuration
