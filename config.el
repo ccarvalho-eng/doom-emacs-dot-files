@@ -47,7 +47,7 @@
 (defvar my-current-theme 'doom-one
   "Current theme being used in Emacs.")
 
-(defvar my-light-theme 'doom-solarized-light
+(defvar my-light-theme 'solo-jazz
   "Light theme to use during daytime.")
 
 (defvar my-dark-theme 'doom-one
@@ -55,7 +55,7 @@
 
 (defun my-set-theme (theme)
   "Set the current THEME in Emacs."
-  (when (member theme '(doom-one doom-solarized-light))
+  (when (member theme '(doom-one solo-jazz))
     (disable-theme my-current-theme)
     (load-theme theme t)
     (setq my-current-theme theme)
