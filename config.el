@@ -44,7 +44,28 @@
 ;; -----------------------------------------------------------------------------
 ;; Org configuration
 ;; -----------------------------------------------------------------------------
-(setq org-directory "~/Library/Mobile Documents/com~apple~CloudDocs/Documents")
+;; Define a variable to store the directory path for the journal files
+(defvar my-journal-directory "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Kefalonia/Journal/"
+  "The directory where I store my journal files.")
+
+;; Set the date format for org-journal entries
+(setq org-journal-date-format "%a %b %e, %Y")
+
+;; Set the file format for org-journal entries
+(setq org-journal-file-format "%Y-%m-%d.org")
+
+;; Set the default org directory to the journal directory
+(setq org-directory my-journal-directory)
+
+;; Set the org-journal directory to the journal directory
+(after! org-journal
+  (setq org-journal-dir my-journal-directory))
+
+;; Set the default notes file to the journal directory
+(setq org-default-notes-file my-journal-directory)
+
+;; Set the agenda files to the journal directory
+(setq org-agenda-files `(,my-journal-directory))
 
 ;; -----------------------------------------------------------------------------
 ;; Line numbers
