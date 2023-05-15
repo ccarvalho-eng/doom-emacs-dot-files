@@ -182,6 +182,31 @@
   (let ((default-directory (projectile-project-root)))
     (compile "mix dialyzer")))
 
+(defun my-elixir-mix-deps-compile ()
+  (interactive)
+  (let ((default-directory (projectile-project-root)))
+    (compile "mix deps.compile")))
+
+(defun my-elixir-mix-deps-get ()
+  (interactive)
+  (let ((default-directory (projectile-project-root)))
+    (compile "mix deps.get")))
+
+(defun my-elixir-mix-ecto-create ()
+  (interactive)
+  (let ((default-directory (projectile-project-root)))
+    (compile "mix ecto.create")))
+
+(defun my-elixir-mix-ecto-migrate ()
+  (interactive)
+  (let ((default-directory (projectile-project-root)))
+    (compile "mix ecto.migrate")))
+
+(defun my-elixir-mix-ecto-rollback ()
+  (interactive)
+  (let ((default-directory (projectile-project-root)))
+    (compile "mix ecto.rollback")))
+
 ;; -----------------------------------------------------------------------------
 ;; Elixir keybindings
 ;; -----------------------------------------------------------------------------
@@ -192,7 +217,12 @@
       :desc "Toggle Test" :nve "cT" #'exunit-toggle-file-and-test
       :desc "Inspect" :nve "cI" #'elixir-append-inspect
       :desc "Mix Credo" :nve "mc" #'my-elixir-mix-credo
-      :desc "Mix Dialyzer" :nve "md" #'my-elixir-mix-dialyzer)
+      :desc "Mix Dialyzer" :nve "md" #'my-elixir-mix-dialyzer
+      :desc "Mix Deps Compile" :nve "mDc" #'my-elixir-mix-deps-compile
+      :desc "Mix Deps Get" :nve "mDg" #'my-elixir-mix-deps-get
+      :desc "Mix Ecto Create" :nve "meC" #'my-elixir-mix-ecto-create
+      :desc "Mix Ecto Migrate" :nve "meM" #'my-elixir-mix-ecto-migrate
+      :desc "Mix Ecto Rollback" :nve "meR" #'my-elixir-mix-ecto-rollback)
 
 ;; -----------------------------------------------------------------------------
 ;; LSP mode file watch ignored
