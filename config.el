@@ -45,7 +45,7 @@
 ;; Org configuration
 ;; -----------------------------------------------------------------------------
 ;; Define a variable to store the directory path for the journal files
-(defvar my-journal-directory "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Kefalonia/Journal/"
+(defvar my-journal-directory "~/org"
   "The directory where I store my journal files.")
 
 ;; Set the date format for org-journal entries
