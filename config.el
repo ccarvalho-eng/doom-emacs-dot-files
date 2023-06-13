@@ -67,6 +67,29 @@
 ;; Set the agenda files to the journal directory
 (setq org-agenda-files `(,my-journal-directory))
 
+(after! org-capture
+  (setq org-capture-templates
+      '(("t" "todo" entry (file+headline "~/todo.org")
+         "* TODO %?")
+        ("T" "todo today" entry (file+headline "~/todo.org")
+         "* TODO %?\nDEADLINE: %t")
+       ("i" "inbox" entry (file "~/inbox.org")
+         "* %?")
+       ("v" "clip to inbox" entry (file "~/inbox.org")
+         "* %x%?"))
+  )
+)
+
+(after! org
+  (setq org-agenda-deadline-leaders '("" "" "%2d d. ago: ")
+      org-deadline-warning-days 0
+      org-agenda-span 7
+      org-agenda-start-day "-0d"
+      org-agenda-skip-function-global '(org-agenda-skip-entry-if 'todo 'done)
+      org-log-done 'time
+      )
+)
+
 ;; -----------------------------------------------------------------------------
 ;; Line numbers
 ;; -----------------------------------------------------------------------------
