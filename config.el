@@ -120,15 +120,6 @@
                                                                  :json-false))))
                                           (lsp--set-configuration config)))))))
 
-  (setq lsp-enable-file-watchers nil
-        lsp-enable-text-document-color nil
-        lsp-enable-on-type-formatting nil
-        lsp-enable-symbol-highlighting nil
-        lsp-modeline-code-actions-enable nil
-        lsp-modeline-diagnostics-enable nil
-        lsp-headerline-breadcrumb-enable nil
-        lsp-lens-enable nil)
-
 (use-package! lsp-ui
   :commands lsp-ui-mode
   :config
