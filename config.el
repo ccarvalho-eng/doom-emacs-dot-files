@@ -163,37 +163,37 @@
   (insert " |> IO.inspect")
   (evil-normal-state))
 
-(defun my-elixir-mix-credo ()
+(defun elixir-mix-credo ()
   (interactive)
   (let ((default-directory (projectile-project-root)))
     (compile "mix credo")))
 
-(defun my-elixir-mix-dialyzer ()
+(defun elixir-mix-dialyzer ()
   (interactive)
   (let ((default-directory (projectile-project-root)))
     (compile "mix dialyzer")))
 
-(defun my-elixir-mix-deps-compile ()
+(defun elixir-mix-deps-compile ()
   (interactive)
   (let ((default-directory (projectile-project-root)))
     (compile "mix deps.compile")))
 
-(defun my-elixir-mix-deps-get ()
+(defun elixir-mix-deps-get ()
   (interactive)
   (let ((default-directory (projectile-project-root)))
     (compile "mix deps.get")))
 
-(defun my-elixir-mix-ecto-create ()
+(defun elixir-mix-ecto-create ()
   (interactive)
   (let ((default-directory (projectile-project-root)))
     (compile "mix ecto.create")))
 
-(defun my-elixir-mix-ecto-migrate ()
+(defun elixir-mix-ecto-migrate ()
   (interactive)
   (let ((default-directory (projectile-project-root)))
     (compile "mix ecto.migrate")))
 
-(defun my-elixir-mix-ecto-rollback ()
+(defun elixir-mix-ecto-rollback ()
   (interactive)
   (let ((default-directory (projectile-project-root)))
     (compile "mix ecto.rollback")))
@@ -206,14 +206,14 @@
       :desc "Sort Lines" :nve "l" #'sort-lines
       :desc "iMenu" :nve "c/" #'lsp-ui-imenu
       :desc "Toggle Test" :nve "cT" #'exunit-toggle-file-and-test
-      :desc "Inspect" :nve "cI" #'elixir-append-inspect
-      :desc "Mix Credo" :nve "mc" #'my-elixir-mix-credo
-      :desc "Mix Dialyzer" :nve "md" #'my-elixir-mix-dialyzer
-      :desc "Mix Deps Compile" :nve "mDc" #'my-elixir-mix-deps-compile
-      :desc "Mix Deps Get" :nve "mDg" #'my-elixir-mix-deps-get
-      :desc "Mix Ecto Create" :nve "meC" #'my-elixir-mix-ecto-create
-      :desc "Mix Ecto Migrate" :nve "meM" #'my-elixir-mix-ecto-migrate
-      :desc "Mix Ecto Rollback" :nve "meR" #'my-elixir-mix-ecto-rollback)
+      :desc "IO.inspect/1" :nve "cI" #'elixir-append-inspect
+      :desc "mix credo" :nve "mc" #'elixir-mix-credo
+      :desc "mix dialyzer" :nve "md" #'elixir-mix-dialyzer
+      :desc "mix deps.compile" :nve "mDc" #'elixir-mix-deps-compile
+      :desc "mix deps.get" :nve "mDg" #'elixir-mix-deps-get
+      :desc "mix ecto.create" :nve "meC" #'elixir-mix-ecto-create
+      :desc "mix ecto.migrate" :nve "meM" #'elixir-mix-ecto-migrate
+      :desc "mix ecto.rollback" :nve "meR" #'elixir-mix-ecto-rollback)
 
 ;; -----------------------------------------------------------------------------
 ;; LSP mode file watch ignored
