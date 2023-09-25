@@ -39,7 +39,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Fonts
 ;; -----------------------------------------------------------------------------
-(setq doom-font (font-spec :family "Hack Nerd Font Mono" :size 10 :weight 'bold))
+(setq doom-font (font-spec :family "MonacoB2" :size 10 :weight 'bold))
 
 ;; -----------------------------------------------------------------------------
 ;; Org configuration
