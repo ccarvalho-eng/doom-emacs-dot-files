@@ -45,19 +45,19 @@
       ("solo-jazz-yellow-1"               . "#f2f1d6")
       ("solo-jazz-yellow-2"               . "#ecead1")
       ("solo-jazz-light-green"            . "#e4ffde")
-      ("solo-jazz-azure"                  . "#fce5cd")
+      ("solo-jazz-soft-pastel"            . "#fce5cd")
       ("solo-jazz-honeydew"               . "#eafaea")
-      ("solo-jazz-rose"                   . "#faeaea")
+      ("solo-jazz-rose"                   . "#d278aa")
       ("solo-jazz-grey"                   . "#d0d0d0")
       ("solo-jazz-slate"                  . "#778ca3")
       ("solo-jazz-black"                  . "#24292e")
 
-      ("solo-jazz-orange"                 . "#ff5200")
+      ("solo-jazz-orange"                 . "#f3a09c")
       ("solo-jazz-red"                    . "#fe2500")
       ("solo-jazz-pink"                   . "#fa1090")
       ("solo-jazz-violet"                 . "#c71585")
       ("solo-jazz-purple+1"               . "#9d2dab")
-      ("solo-jazz-purple"                 . "#3b2685")
+      ("solo-jazz-purple"                 . "#7C6D91")
       ("solo-jazz-blue"                   . "#005cc5")
       ("solo-jazz-blue+1"                 . "#00afef")
       ("solo-jazz-teal"                   . "#009c9f")
@@ -189,7 +189,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(diff-file-header                        ((,class (:background ,solo-jazz-yellow :foreground ,solo-jazz-purple :bold t)) (t (:background ,solo-jazz-purple :foreground ,solo-jazz-yellow :bold t))))
 
    ;; dired
-   `(dired-directory                         ((t (:foreground ,solo-jazz-blue))))
+   `(dired-directory                         ((t (:foreground ,solo-jazz-purple))))
    `(dired-header                            ((t (:foreground ,solo-jazz-teal))))
    `(dired-perm-write                        ((t (:foreground ,solo-jazz-pink))))
    `(dired-symlink                           ((t (:inherit link))))
@@ -213,8 +213,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(eval-sexp-fu-flash-error                ((t (:inherit error))))
 
    ;; hl-line
-   `(hl-line-face                            ((,class (:background ,solo-jazz-azure)) (t :weight bold)))
-   `(hl-line                                 ((,class (:background ,solo-jazz-azure)) (t :weight bold)))
+   `(hl-line-face                            ((,class (:background ,solo-jazz-light-green)) (t :weight bold)))
+   `(hl-line                                 ((,class (:background ,solo-jazz-light-green)) (t :weight bold)))
 
    ;; ido
    `(ido-first-match                         ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-teal+1 :weight bold))))
@@ -356,7 +356,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(neo-banner-face                         ((t (:foreground ,solo-jazz-teal :weight bold))))
    `(neo-header-face                         ((t (:foreground ,solo-jazz-purple))))
    `(neo-root-dir-face                       ((t (:foreground ,solo-jazz-teal :weight bold))))
-   `(neo-dir-link-face                       ((t (:foreground ,solo-jazz-blue))))
+   `(neo-dir-link-face                       ((t (:foreground ,solo-jazz-purple))))
    `(neo-file-link-face                      ((t (:foreground ,solo-jazz-purple))))
    `(neo-expand-btn-face                     ((t (:foreground ,solo-jazz-purple))))
    `(neo-vc-default-face                     ((t (:foreground ,solo-jazz-purple))))
@@ -450,7 +450,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 
    ;; undo-tree
    `(undo-tree-visualizer-active-branch-face ((t (:foreground ,solo-jazz-teal :weight bold))))
-   `(undo-tree-visualizer-current-face       ((t (:foreground ,solo-jazz-blue :weight bold))))
+   `(undo-tree-visualizer-current-face       ((t (:foreground ,solo-jazz-purple :weight bold))))
    `(undo-tree-visualizer-default-face       ((t (:foreground ,solo-jazz-purple))))
    `(undo-tree-visualizer-register-face      ((t (:foreground ,solo-jazz-orange))))
    `(undo-tree-visualizer-unmodified-face    ((t (:foreground ,solo-jazz-pink))))
@@ -463,7 +463,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(web-mode-css-prop-face                  ((t (:foreground ,solo-jazz-orange))))
    `(web-mode-css-pseudo-class-face          ((t (:foreground ,solo-jazz-teal :weight bold))))
    `(web-mode-current-column-highlight-face  ((t (:background ,solo-jazz-light-green))))
-   `(web-mode-current-element-highlight-face ((t (:background ,solo-jazz-azure))))
+   `(web-mode-current-element-highlight-face ((t (:background ,solo-jazz-soft-pastel))))
    `(web-mode-css-rule-face                  ((t (:foreground ,solo-jazz-teal))))
    `(web-mode-doctype-face                   ((t (:inherit ,font-lock-comment-face))))
    `(web-mode-folded-face                    ((t (:underline t))))
