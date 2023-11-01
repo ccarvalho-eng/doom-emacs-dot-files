@@ -44,7 +44,7 @@
     '(("solo-jazz-yellow"                 . "#f9f8e4")
       ("solo-jazz-yellow-1"               . "#f2f1d6")
       ("solo-jazz-yellow-2"               . "#ecead1")
-      ("solo-jazz-soft-pastel"            . "#d4c159")
+      ("solo-jazz-light-green"            . "#e4ffde")
       ("solo-jazz-azure"                  . "#fce5cd")
       ("solo-jazz-honeydew"               . "#eafaea")
       ("solo-jazz-rose"                   . "#faeaea")
@@ -119,9 +119,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(shadow                                  ((t (:foreground ,solo-jazz-slate))))
    `(file-name-shadow                        ((t (:foreground ,solo-jazz-slate))))
    `(fringe                                  ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-yellow))))
-   `(popup-tip-face                          ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-soft-pastel))))
+   `(popup-tip-face                          ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-light-green))))
    `(header-line                             ((t (:foreground ,solo-jazz-purple))))
-   `(highlight                               ((t (:background ,solo-jazz-soft-pastel))))
+   `(highlight                               ((t (:background ,solo-jazz-light-green))))
    `(success                                 ((t (:foreground ,solo-jazz-green :weight bold))))
    `(warning                                 ((t (:foreground ,solo-jazz-orange :weight bold))))
    `(error                                   ((t (:foreground ,solo-jazz-red :weight bold))))
@@ -131,7 +131,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(mode-line                               ((,class (:background ,solo-jazz-yellow-2 ))))
    `(mode-line-buffer-id                     ((t (:foreground ,solo-jazz-teal))))
    `(mode-line-inactive                      ((t (:foreground ,solo-jazz-slate :background ,solo-jazz-yellow :box (:line-width -1 :color ,solo-jazz-grey)))))
-   `(region                                  ((,class (:background ,solo-jazz-soft-pastel))))
+   `(region                                  ((,class (:background ,solo-jazz-light-green))))
    `(secondary-selection                     ((t (:background ,solo-jazz-honeydew))))
    `(trailing-whitespace                     ((t (:background ,solo-jazz-red))))
    `(vertical-border                         ((t (:foreground ,solo-jazz-grey))))
@@ -157,9 +157,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; company
    `(company-tooltip                         ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-yellow-1))))
    `(company-tooltip-annotation              ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-yellow-1))))
-   `(company-tooltip-annotation-selection    ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-soft-pastel))))
-   `(company-tooltip-selection               ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-soft-pastel))))
-   `(company-tooltip-mouse                   ((t (:background ,solo-jazz-soft-pastel))))
+   `(company-tooltip-annotation-selection    ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-light-green))))
+   `(company-tooltip-selection               ((t (:foreground ,solo-jazz-purple :background ,solo-jazz-light-green))))
+   `(company-tooltip-mouse                   ((t (:background ,solo-jazz-light-green))))
    `(company-tooltip-common                  ((t (:foreground ,solo-jazz-blue))))
    `(company-tooltip-common-selection        ((t (:foreground ,solo-jazz-blue))))
    `(company-scrollbar-fg                    ((t (:background ,solo-jazz-purple))))
@@ -234,7 +234,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ivy-remote                              ((t (:foreground ,solo-jazz-blue :background ,solo-jazz-yellow))))
    `(ivy-subdir                              ((t (:foreground ,solo-jazz-blue :background ,solo-jazz-yellow))))
    `(ivy-virtual                             ((t (:foreground ,solo-jazz-slate))))
-   `(ivy-minibuffer-match-face-1             ((t (:background ,solo-jazz-soft-pastel))))
+   `(ivy-minibuffer-match-face-1             ((t (:background ,solo-jazz-light-green))))
    `(ivy-minibuffer-match-face-2             ((t (:background ,solo-jazz-slate))))
    `(ivy-minibuffer-match-face-3             ((t (:background ,solo-jazz-slate))))
    `(ivy-minibuffer-match-face-4             ((t (:background ,solo-jazz-purple))))
@@ -251,16 +251,16 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(line-number-current-line                ((,class (:inherit fixed-pitch :foreground ,solo-jazz-purple :weight bold :background ,solo-jazz-yellow))))
 
    ;; lispy
-   `(lispy-command-name-face                 ((t (:background ,solo-jazz-soft-pastel :foreground ,solo-jazz-pink))))
+   `(lispy-command-name-face                 ((t (:background ,solo-jazz-light-green :foreground ,solo-jazz-pink))))
    `(lispy-cursor-face                       ((t (:foreground ,solo-jazz-yellow :background ,solo-jazz-purple))))
-   `(lispy-face-hint                         ((t (:background ,solo-jazz-soft-pastel :foreground ,solo-jazz-purple))))
+   `(lispy-face-hint                         ((t (:background ,solo-jazz-light-green :foreground ,solo-jazz-purple))))
 
    ;; magit
    `(magit-bisect-good                       ((t (:foreground ,solo-jazz-slate))))
    `(magit-bisect-skip                       ((t (:foreground ,solo-jazz-teal))))
    `(magit-bisect-bad                        ((t (:foreground ,solo-jazz-blue+1))))
 
-   `(magit-blame-heading                     ((t (:background ,solo-jazz-soft-pastel :foreground ,solo-jazz-purple))))
+   `(magit-blame-heading                     ((t (:background ,solo-jazz-light-green :foreground ,solo-jazz-purple))))
    `(magit-blame-hash                        ((t (:background ,solo-jazz-teal+1 :foreground ,solo-jazz-purple))))
    `(magit-blame-name                        ((t (:background ,solo-jazz-teal+1 :foreground ,solo-jazz-purple))))
    `(magit-blame-date                        ((t (:background ,solo-jazz-teal+1 :foreground ,solo-jazz-purple))))
@@ -281,10 +281,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(magit-diff-context                      ((t (:background ,solo-jazz-yellow :foreground ,solo-jazz-slate))))
    `(magit-diff-context-highlight            ((t (:background ,solo-jazz-yellow :foreground ,solo-jazz-black))))
    `(magit-diff-file-heading                 ((t (:weight bold))))
-   `(magit-diff-file-heading-highlight       ((t (:background ,solo-jazz-soft-pastel  :weight bold))))
+   `(magit-diff-file-heading-highlight       ((t (:background ,solo-jazz-light-green  :weight bold))))
    `(magit-diff-file-heading-selection       ((t (:background ,solo-jazz-yellow :foreground ,solo-jazz-purple :weight bold))))
    `(magit-diff-hunk-heading                 ((t (:background ,solo-jazz-yellow-1 :foreground ,solo-jazz-black))))
-   `(magit-diff-hunk-heading-highlight       ((t (:background ,solo-jazz-soft-pastel :foreground ,solo-jazz-purple))))
+   `(magit-diff-hunk-heading-highlight       ((t (:background ,solo-jazz-light-green :foreground ,solo-jazz-purple))))
    `(magit-diff-hunk-heading-selection       ((t (:background ,solo-jazz-yellow :foreground ,solo-jazz-purple))))
    `(magit-diff-lines-heading                ((t (:background ,solo-jazz-purple :foreground ,solo-jazz-yellow))))
    `(magit-diff-removed                      ((t (:inherit diff-removed))))
@@ -321,7 +321,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(magit-refname-stash                     ((t (:background ,solo-jazz-yellow :foreground ,solo-jazz-purple :weight bold))))
    `(magit-refname-wip                       ((t (:background ,solo-jazz-yellow :foreground ,solo-jazz-purple :weight bold))))
 
-   `(magit-section-highlight                 ((t (:background ,solo-jazz-soft-pastel))))
+   `(magit-section-highlight                 ((t (:background ,solo-jazz-light-green))))
    `(magit-section-heading                   ((t (:foreground ,solo-jazz-teal :weight bold))))
    `(magit-section-heading-selection         ((t (:foreground ,solo-jazz-purple :weight bold))))
 
@@ -462,7 +462,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(web-mode-css-at-rule-face               ((t (:foreground ,solo-jazz-orange ))))
    `(web-mode-css-prop-face                  ((t (:foreground ,solo-jazz-orange))))
    `(web-mode-css-pseudo-class-face          ((t (:foreground ,solo-jazz-teal :weight bold))))
-   `(web-mode-current-column-highlight-face  ((t (:background ,solo-jazz-soft-pastel))))
+   `(web-mode-current-column-highlight-face  ((t (:background ,solo-jazz-light-green))))
    `(web-mode-current-element-highlight-face ((t (:background ,solo-jazz-azure))))
    `(web-mode-css-rule-face                  ((t (:foreground ,solo-jazz-teal))))
    `(web-mode-doctype-face                   ((t (:inherit ,font-lock-comment-face))))
@@ -510,7 +510,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      '(,solo-jazz-blue+1 ,solo-jazz-slate ,solo-jazz-teal ,solo-jazz-slate ,solo-jazz-blue
                          ,solo-jazz-pink ,solo-jazz-teal ,solo-jazz-slate))
    ;; pdf-tools
-   `(pdf-view-midnight-colors '(,solo-jazz-slate . ,solo-jazz-soft-pastel))
+   `(pdf-view-midnight-colors '(,solo-jazz-slate . ,solo-jazz-light-green))
 
    ;; vc-annotate
    `(vc-annotate-color-map
