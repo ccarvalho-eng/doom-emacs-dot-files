@@ -50,7 +50,7 @@
 ;; Org configuration
 ;; -----------------------------------------------------------------------------
 ;; Define a variable to store the directory path for the journal files
-(defvar my-journal-directory "~/Library/Mobile Documents/com~apple~CloudDocs/Documents/org/journal/"
+(defvar my-journal-directory "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Base Camp/org/journal/"
   "The directory where I store my journal files.")
 
 ;; Set the date format for org-journal entries
@@ -60,7 +60,7 @@
 (setq org-journal-file-format "%Y-%m-%d.org")
 
 ;; Set the default org directory
-(setq org-directory "~/Library/Mobile Documents/com~apple~CloudDocs/Documents/org/")
+(setq org-directory "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Base Camp/org/")
 
 ;; Set the org-journal directory to the journal directory
 (after! org-journal
