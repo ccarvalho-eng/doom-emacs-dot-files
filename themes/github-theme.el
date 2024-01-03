@@ -50,9 +50,9 @@
     ("github-html-tag"               . "#63a35c")
     ("github-keyword"                . "#a71d5d")
     ("github-selection"              . "#b0cde7")
-    ("github-string"                 . "#183691")
+    ("github-string"                 . "#69A270")
     ("github-text"                   . "#333333")
-    ("github-white"                  . "#ffffff"))
+    ("github-white"                  . "#F8F8F8"))
   "List of GitHub colors.
 Each element has the form (NAME . HEX).")
 
