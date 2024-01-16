@@ -41,6 +41,14 @@
 ;; -----------------------------------------------------------------------------
 (setq doom-font (font-spec :family "MonacoB2" :size 10))
 
+;; Set the default font size for Org mode with smaller sizes
+(custom-set-faces!
+  '(org-level-1 :height 1.1)
+  '(org-level-2 :height 1.05)
+  '(org-level-3 :height 1.0)
+  ;; Add more lines for other heading levels if needed
+  )
+
 ;; -----------------------------------------------------------------------------
 ;; Theme
 ;; -----------------------------------------------------------------------------
@@ -84,8 +92,8 @@
 ;; -----------------------------------------------------------------------------
 ;; Frame configuration
 ;; -----------------------------------------------------------------------------
-(add-to-list 'default-frame-alist '(width . 200))
-(add-to-list 'default-frame-alist '(height . 70))
+(add-to-list 'default-frame-alist '(width . 150))
+(add-to-list 'default-frame-alist '(height . 52))
 
 ;; -----------------------------------------------------------------------------
 ;; Keybindings
