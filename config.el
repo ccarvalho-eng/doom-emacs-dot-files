@@ -92,8 +92,8 @@
 ;; -----------------------------------------------------------------------------
 ;; Frame configuration
 ;; -----------------------------------------------------------------------------
-(add-to-list 'default-frame-alist '(width . 150))
-(add-to-list 'default-frame-alist '(height . 52))
+(add-to-list 'default-frame-alist '(width . 180))
+(add-to-list 'default-frame-alist '(height . 63))
 
 ;; -----------------------------------------------------------------------------
 ;; Keybindings
