@@ -279,3 +279,16 @@
 
 ;; Neotree keybindings
 (map! :n "<f8>" #'neotree-toggle)
+
+;; -----------------------------------------------------------------------------
+;; Text wrapping
+;; -----------------------------------------------------------------------------
+
+;; Set fill-column to a reasonable value
+(setq-default fill-column 80)
+
+;; Enable auto-fill-mode to automatically wrap text at `fill-column`
+(add-hook 'text-mode-hook #'auto-fill-mode)
+
+;; Enable visual line mode for visual line wrapping
+(global-visual-line-mode 1)
