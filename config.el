@@ -264,7 +264,11 @@
   (setq neo-keymap-style 'concise)
   (doom-themes-neotree-config)
   (setq doom-themes-neotree-file-icons t)
-  (setq neo-show-updir-line nil))
+  (setq neo-show-updir-line nil)
+  ;; Prevent text wrapping within Neotree
+  (add-hook 'neo-after-create-hook
+            (lambda (_)
+              (setq truncate-lines t))))
 
 ;; Automatically resize Neotree window
 (add-hook 'neo-after-create-hook
