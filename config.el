@@ -252,7 +252,7 @@
 (use-package! neotree
   :defer t
   :config
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (setq neo-theme (if (display-graphic-p) 'nerd 'arrow))
   (setq neo-smart-open t)
   (setq neo-window-width 30)
   (setq neo-window-fixed-size nil)
