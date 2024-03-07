@@ -61,8 +61,12 @@
 ;; -----------------------------------------------------------------------------
 ;; Org configuration
 ;; -----------------------------------------------------------------------------
+;; Define a variable to store the directory path for org-mode files
+(defvar my-org-directory "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/org-mode/"
+  "The directory where I store my org files.")
+
 ;; Define a variable to store the directory path for the journal files
-(defvar my-journal-directory "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Base Camp/org/journal/"
+(defvar my-journal-directory "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/org-mode/journal/"
   "The directory where I store my journal files.")
 
 ;; Set the date format for org-journal entries
@@ -72,17 +76,20 @@
 (setq org-journal-file-format "%Y-%m-%d.org")
 
 ;; Set the default org directory
-(setq org-directory "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Base Camp/org/")
+(setq org-directory my-org-directory)
 
 ;; Set the org-journal directory to the journal directory
 (after! org-journal
   (setq org-journal-dir my-journal-directory))
 
 ;; Set the default notes file to the journal directory
-(setq org-default-notes-file my-journal-directory)
+(setq org-default-notes-file my-org-directory)
 
-;; Set the agenda files to the journal directory
-(setq org-agenda-files `(,my-journal-directory))
+;; Set the agenda files to include both org and journal directories
+(setq org-agenda-files `(,my-org-directory ,my-journal-directory))
+
+;; Include org agenda diary
+(setq org-agenda-include-diary t)
 
 ;; -----------------------------------------------------------------------------
 ;; Line numbers
