@@ -232,7 +232,7 @@
       :desc "Toggle Test" :nve "cT" #'exunit-toggle-file-and-test
       :desc "IO.inspect/1" :nve "cI" #'elixir-append-inspect
       :desc "mix credo" :nve "mc" #'elixir-mix-credo
-      :desc "mix dialyzer" :nve "md" #'elixir-mix-dialyzer
+      :desc "mix dialyzer" :nve "mdy" #'elixir-mix-dialyzer
       :desc "mix deps.compile" :nve "mDc" #'elixir-mix-deps-compile
       :desc "mix deps.get" :nve "mDg" #'elixir-mix-deps-get
       :desc "mix ecto.create" :nve "meC" #'elixir-mix-ecto-create
