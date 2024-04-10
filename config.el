@@ -62,11 +62,11 @@
 ;; Org configuration
 ;; -----------------------------------------------------------------------------
 ;; Define a variable to store the directory path for org-mode files
-(defvar my-org-directory "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/org-notes/"
+(defvar my-org-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-notes/"
   "The directory where I store my org files.")
 
 ;; Define a variable to store the directory path for the journal files
-(defvar my-journal-directory "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/org-notes/journal/"
+(defvar my-journal-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-notes/journal/"
   "The directory where I store my journal files.")
 
 ;; Set the date format for org-journal entries
