@@ -7,7 +7,7 @@
 ;; User configuration
 ;; -----------------------------------------------------------------------------
 (setq user-full-name "Cristiano Carvalho"
-      user-mail-address "cristiano.dev@icloud.com")
+      user-mail-address "ccarvalho.dev@icloud.com")
 
 ;; Projectile configuration
 (use-package! projectile
@@ -39,7 +39,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Fonts
 ;; -----------------------------------------------------------------------------
-(setq doom-font (font-spec :family "MonacoB2" :size 10 :weight 'bold))
+(setq doom-font (font-spec :family "MonacoB2" :size 9.5 :weight 'bold))
 
 ;; Set the default font size for Org mode with smaller sizes
 (custom-set-faces!
@@ -99,7 +99,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Frame configuration
 ;; -----------------------------------------------------------------------------
-(add-to-list 'default-frame-alist '(width . 189))
+(add-to-list 'default-frame-alist '(width . 196))
 (add-to-list 'default-frame-alist '(height . 66))
 
 ;; -----------------------------------------------------------------------------
