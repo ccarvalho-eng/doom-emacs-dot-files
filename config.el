@@ -52,7 +52,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Theme
 ;; -----------------------------------------------------------------------------
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-nord)
 
 ;; Set transparency to 95 percent
 (set-frame-parameter (selected-frame) 'alpha '(95 95))
