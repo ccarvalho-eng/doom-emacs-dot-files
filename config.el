@@ -52,7 +52,11 @@
 ;; -----------------------------------------------------------------------------
 ;; Theme
 ;; -----------------------------------------------------------------------------
-(setq doom-theme 'doom-earl-grey)
+(setq doom-theme 'doom-one)
+
+(custom-set-faces!
+  `(font-lock-comment-face :slant italic)
+  `(font-lock-doc-face :slant italic))
 
 ;; Set transparency to 95 percent
 (set-frame-parameter (selected-frame) 'alpha '(95 95))
