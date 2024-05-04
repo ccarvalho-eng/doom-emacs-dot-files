@@ -39,7 +39,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Fonts
 ;; -----------------------------------------------------------------------------
-(setq doom-font (font-spec :family "MonacoB2" :size 9.5 :weight 'bold))
+(setq doom-font (font-spec :family "MonacoB2" :size 9.6 :weight 'bold))
 
 ;; Set the default font size for Org mode with smaller sizes
 (custom-set-faces!
