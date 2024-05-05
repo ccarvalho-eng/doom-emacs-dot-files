@@ -52,7 +52,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Theme
 ;; -----------------------------------------------------------------------------
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-material)
 
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
@@ -280,8 +280,6 @@
   (doom-themes-neotree-config)
   (setq doom-themes-neotree-file-icons t)
   (setq neo-show-updir-line nil)
-  ;; Set folder color to purple
-  (set-face-attribute 'neo-dir-link-face nil :foreground "#7c6d91")
   ;; Prevent text wrapping within Neotree
   (add-hook 'neo-after-create-hook
             (lambda (_)
