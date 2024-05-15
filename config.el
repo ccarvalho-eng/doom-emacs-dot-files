@@ -52,7 +52,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Theme
 ;; -----------------------------------------------------------------------------
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-palenight)
 
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
