@@ -263,8 +263,8 @@
 (use-package! neotree
   :defer t
   :config
+  ;; Theme and appearance settings
   (setq neo-theme (if (display-graphic-p) 'nerd 'arrow))
-  (setq neo-smart-open t)
   (setq neo-window-width 30)
   (setq neo-window-fixed-size nil)
   (setq neo-mode-line-type 'neotree)
@@ -273,24 +273,42 @@
   (setq neo-banner-message nil)
   (setq neo-auto-indent-point t)
   (setq neo-keymap-style 'concise)
-  (setq neo-window-position 'right)
+  (setq neo-window-position 'right) ; Position NeoTree on the right side
+
+  ;; Auto-reveal current file
+  (setq neo-smart-open t)
+
+  ;; Custom icons from Doom themes
   (doom-themes-neotree-config)
   (setq doom-themes-neotree-file-icons t)
-  (setq neo-show-updir-line nil)
-  ;; Prevent text wrapping within Neotree
+
+  ;; Prevent text wrapping within NeoTree
   (add-hook 'neo-after-create-hook
             (lambda (_)
-              (setq truncate-lines t))))
+              (setq truncate-lines t)))
 
-;; Automatically resize Neotree window
-(add-hook 'neo-after-create-hook
-          (lambda (_)
-            (let ((fit-window-to-buffer-horizontally t))
-              (neo-buffer--with-resizable-window
-               (fit-window-to-buffer)))))
+  ;; Ignore files/directories
+  (setq neo-hidden-regexp-list
+        '("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$"
+          "__pycache__" ".vscode" ".git" ".DS_Store"))
 
-;; Neotree keybindings
-(map! :n "<f8>" #'neotree-toggle)
+  ;; Auto-resize NeoTree window
+  (add-hook 'neo-after-create-hook
+            (lambda (_)
+              (let ((fit-window-to-buffer-horizontally t))
+                (neo-buffer--with-resizable-window
+                 (fit-window-to-buffer)))))
+
+  ;; Keybindings
+  (map! :leader
+        :desc "Toggle NeoTree" :n "<f8>" #'neotree-toggle))
+
+;; Automatically toggle NeoTree when opening a new frame
+(add-hook 'after-make-frame-functions
+          (lambda (frame)
+            (select-frame frame)
+            (if (display-graphic-p frame)
+                (neotree-toggle))))
 
 ;; -----------------------------------------------------------------------------
 ;; Text wrapping
