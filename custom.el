@@ -42,7 +42,7 @@
      ("dot"
       (:foreground "gray50"))))
  '(package-selected-packages
-   '(farmhouse-themes flexoki-themes nord-theme eyebrowse xah-fly-keys light-soap-theme org-journal twilight-anti-bright-theme magithub standard-themes tangotango-theme timu-macos-theme atom-one-dark-theme organic-green-theme github-dark-vscode-theme github-modern-theme sublime-themes shanty-themes stimmung-themes sketch-themes ef-themes hydandata-light-theme zweilight-theme flatland-theme flatfluc-theme flatui-dark-theme web-mode flyspell-correct autumn-light-theme ubuntu-theme nano-theme vs-light-theme jazz-theme solo-jazz-theme git-lens github-theme highlight-numbers vscode-dark-plus-theme vscode-icon lsp-treemacs flycheck-dialyxir lsp-ui flycheck-elixir flycheck elixir-mode vdiff-magit vdiff))
+   '(sequential-yank farmhouse-themes flexoki-themes nord-theme eyebrowse xah-fly-keys light-soap-theme org-journal twilight-anti-bright-theme magithub standard-themes tangotango-theme timu-macos-theme atom-one-dark-theme organic-green-theme github-dark-vscode-theme github-modern-theme sublime-themes shanty-themes stimmung-themes sketch-themes ef-themes hydandata-light-theme zweilight-theme flatland-theme flatfluc-theme flatui-dark-theme web-mode flyspell-correct autumn-light-theme ubuntu-theme nano-theme vs-light-theme jazz-theme solo-jazz-theme git-lens github-theme highlight-numbers vscode-dark-plus-theme vscode-icon lsp-treemacs flycheck-dialyxir lsp-ui flycheck-elixir flycheck elixir-mode vdiff-magit vdiff))
  '(pdf-view-midnight-colors (cons "#cbccc6" "#1f2430"))
  '(rustic-ansi-faces
    ["#1f2430" "#f28779" "#bae67e" "#ffd580" "#73d0ff" "#d4bfff" "#5ccfe6" "#cbccc6"])
@@ -76,6 +76,7 @@
     (cons 340 "#484f5b")
     (cons 360 "#484f5b")))
  '(vc-annotate-very-old-color nil)
+ '(warning-suppress-types '((transient) (defvaralias)))
  '(widget-image-enable nil)
  '(x-underline-at-descent-line t))
 (custom-set-faces
