@@ -273,6 +273,7 @@
   (setq neo-banner-message nil)
   (setq neo-auto-indent-point t)
   (setq neo-keymap-style 'concise)
+  (setq neo-window-position 'right)
   (doom-themes-neotree-config)
   (setq doom-themes-neotree-file-icons t)
   (setq neo-show-updir-line nil)
