@@ -89,3 +89,4 @@
  '(org-level-1 ((t (:height 1.1))))
  '(org-level-2 ((t (:height 1.05))))
  '(org-level-3 ((t (:height 1.0)))))
+(put 'scroll-left 'disabled nil)

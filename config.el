@@ -58,10 +58,6 @@
   `(font-lock-comment-face :slant italic)
   `(font-lock-doc-face :slant italic))
 
-;; Set transparency to 95 percent
-(set-frame-parameter (selected-frame) 'alpha '(95 95))
-(add-to-list 'default-frame-alist '(alpha 95 95))
-
 ;; -----------------------------------------------------------------------------
 ;; Org configuration
 ;; -----------------------------------------------------------------------------
