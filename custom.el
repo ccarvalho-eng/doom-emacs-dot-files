@@ -76,7 +76,8 @@
     (cons 340 "#484f5b")
     (cons 360 "#484f5b")))
  '(vc-annotate-very-old-color nil)
- '(warning-suppress-types '((transient) (defvaralias)))
+ '(warning-suppress-log-types '((transient) (transient) (transient) (defvaralias)))
+ '(warning-suppress-types '((transient) (transient) (defvaralias)))
  '(widget-image-enable nil)
  '(x-underline-at-descent-line t))
 (custom-set-faces
