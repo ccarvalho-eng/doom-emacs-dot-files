@@ -52,7 +52,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Theme
 ;; -----------------------------------------------------------------------------
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-palenight)
 
 (custom-set-faces!
   `(font-lock-comment-face :slant italic)
@@ -273,7 +273,7 @@
   (setq neo-banner-message nil)
   (setq neo-auto-indent-point t)
   (setq neo-keymap-style 'concise)
-  (setq neo-window-position 'right) ; Position NeoTree on the right side
+  (setq neo-window-position 'left)
 
   ;; Auto-reveal current file
   (setq neo-smart-open t)
