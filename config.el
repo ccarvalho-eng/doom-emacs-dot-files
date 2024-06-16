@@ -7,7 +7,7 @@
 ;; User configuration
 ;; -----------------------------------------------------------------------------
 (setq user-full-name "Cristiano Carvalho"
-      user-mail-address "ccarvalho.dev@icloud.com")
+      user-mail-address "ccarvalho.infosec@icloud.com")
 
 ;; Projectile configuration
 (use-package! projectile
