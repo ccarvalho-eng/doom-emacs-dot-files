@@ -377,21 +377,7 @@
 (map! :leader
       (:prefix "m"
         :desc "Edit lines" "l" #'mc/edit-lines
-        :desc "Add cursor above" "n" #'mc/mark-next-like-this
-        :desc "Add cursor below" "p" #'mc/mark-previous-like-this
-        :desc "Add cursor to all" "a" #'mc/mark-all-like-this
-        :desc "Add cursor to each line" "e" #'mc/mark-all-like-this-in-region
-        :desc "Add cursor to next like this" "N" #'mc/skip-to-next-like-this
-        :desc "Add cursor to previous like this" "P" #'mc/skip-to-previous-like-this
-        :desc "Mark all words at point" "w" #'mc/mark-all-words-like-this
-        :desc "Mark all symbols at point" "s" #'mc/mark-all-symbols-like-this
-        :desc "Mark all lines in region" "r" #'mc/mark-all-in-region
-        :desc "Edit occurrences or go to next" "o" #'mc/mark-all-like-this-dwim
-        :desc "Edit next occurrence or skip" "O" #'mc/mark-next-like-this
-        :desc "Unmark previous" "u" #'mc/unmark-previous-like-this
-        :desc "Unmark next" "U" #'mc/unmark-next-like-this
-        :desc "Skip current" "k" #'mc/skip-to-next-like-this
-        :desc "Unmark all" "x" #'mc/mark-all-like-this-in-defun))
+        :desc "Add cursor to all" "a" #'mc/mark-all-like-this))
 
 ;; -----------------------------------------------------------------------------
 ;; Permanently display workspace tabs
