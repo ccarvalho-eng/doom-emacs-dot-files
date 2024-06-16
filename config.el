@@ -85,8 +85,15 @@
 ;; Set the default notes file to the journal directory
 (setq org-default-notes-file my-org-directory)
 
-;; Set the agenda files to include both org and journal directories
-(setq org-agenda-files `(,my-org-directory ,my-journal-directory))
+;; Define a function to recursively find org files in a directory
+(defun find-org-files-recursively (directory)
+  "Find all .org files recursively within DIRECTORY."
+  (directory-files-recursively directory "\\.org$"))
+
+;; Set the agenda files to include both org and journal directories and subdirectories
+(setq org-agenda-files
+      (append
+       (find-org-files-recursively my-org-directory)))    ; Include org files
 
 ;; Include org agenda diary
 (setq org-agenda-include-diary t)
