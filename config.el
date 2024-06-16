@@ -70,7 +70,7 @@
   "The directory where I store my journal files.")
 
 ;; Set the date format for org-journal entries
-(setq org-journal-date-format "%a %b %e, %Y")
+(setq org-journal-date-format "%a %e %b, %Y")
 
 ;; Set the file format for org-journal entries
 (setq org-journal-file-format "%Y-%m-%d.org")
@@ -90,6 +90,44 @@
 
 ;; Include org agenda diary
 (setq org-agenda-include-diary t)
+
+(defun org-journal-daily-entry ()
+  "Create a new daily journal entry."
+  (interactive)
+  (setq org-journal-dir (concat my-journal-directory "daily/"))
+  (setq org-journal-file-format "%Y-%m-%d.org")
+  (setq org-journal-file-type 'daily)
+  (org-journal-new-entry nil))
+
+(defun org-journal-weekly-entry ()
+  "Create a new weekly journal entry."
+  (interactive)
+  (setq org-journal-dir (concat my-journal-directory "weekly/"))
+  (setq org-journal-file-format "%Y-W%V.org")
+  (setq org-journal-file-type 'weekly)
+  (org-journal-new-entry nil))
+
+(defun org-journal-monthly-entry ()
+  "Create a new monthly journal entry."
+  (interactive)
+  (setq org-journal-dir (concat my-journal-directory "monthly/"))
+  (setq org-journal-file-format "%Y-%m.org")
+  (setq org-journal-file-type 'monthly)
+  (org-journal-new-entry nil))
+
+(defun org-journal-yearly-entry ()
+  "Create a new yearly journal entry."
+  (interactive)
+  (setq org-journal-dir (concat my-journal-directory "yearly/"))
+  (setq org-journal-file-format "%Y.org")
+  (setq org-journal-file-type 'yearly)
+  (org-journal-new-entry nil))
+
+(map! :leader
+      :desc "Daily journal entry" "n j d" #'org-journal-daily-entry
+      :desc "Weekly journal entry" "n j w" #'org-journal-weekly-entry
+      :desc "Monthly journal entry" "n j m" #'org-journal-monthly-entry
+      :desc "Yearly journal entry" "n j y" #'org-journal-yearly-entry)
 
 ;; -----------------------------------------------------------------------------
 ;; Line numbers
