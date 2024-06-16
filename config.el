@@ -72,9 +72,6 @@
 ;; Set the date format for org-journal entries
 (setq org-journal-date-format "%a %e %b, %Y")
 
-;; Set the file format for org-journal entries
-(setq org-journal-file-format "%Y-%m-%d.org")
-
 ;; Set the default org directory
 (setq org-directory my-org-directory)
 
@@ -102,6 +99,7 @@
   "Create a new daily journal entry."
   (interactive)
   (setq org-journal-dir (concat my-journal-directory "daily/"))
+  (setq org-journal-date-format "%a %e %b, %Y") ; Daily format: YYYY-MM-DD, Day of the Week
   (setq org-journal-file-format "%Y-%m-%d.org")
   (setq org-journal-file-type 'daily)
   (org-journal-new-entry nil))
@@ -110,6 +108,7 @@
   "Create a new weekly journal entry."
   (interactive)
   (setq org-journal-dir (concat my-journal-directory "weekly/"))
+  (setq org-journal-date-format "Week %V, %Y") ; Weekly format: Week <week number>, Year
   (setq org-journal-file-format "%Y-W%V.org")
   (setq org-journal-file-type 'weekly)
   (org-journal-new-entry nil))
@@ -118,6 +117,7 @@
   "Create a new monthly journal entry."
   (interactive)
   (setq org-journal-dir (concat my-journal-directory "monthly/"))
+  (setq org-journal-date-format "%B %Y") ; Monthly format: Month Year
   (setq org-journal-file-format "%Y-%m.org")
   (setq org-journal-file-type 'monthly)
   (org-journal-new-entry nil))
@@ -126,6 +126,7 @@
   "Create a new yearly journal entry."
   (interactive)
   (setq org-journal-dir (concat my-journal-directory "yearly/"))
+  (setq org-journal-date-format "%Y") ; Yearly format: Year
   (setq org-journal-file-format "%Y.org")
   (setq org-journal-file-type 'yearly)
   (org-journal-new-entry nil))
