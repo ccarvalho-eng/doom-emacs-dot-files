@@ -403,3 +403,8 @@ name as well to trigger updates"
 
 ;; need to run this later for it to not break frame size for some reason
 (run-at-time nil nil (cmd! (tab-bar-mode +1)))
+
+;; -----------------------------------------------------------------------------
+;; Major mode for the hurl restclient
+;; -----------------------------------------------------------------------------
+(add-to-list 'auto-mode-alist '("\\.hurl\\'" . hurl-mode))
