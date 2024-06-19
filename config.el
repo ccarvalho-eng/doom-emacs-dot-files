@@ -90,7 +90,9 @@
 ;; Set the agenda files to include both org and journal directories and subdirectories
 (setq org-agenda-files
       (append
-       (find-org-files-recursively my-org-directory)))    ; Include org files
+       (find-org-files-recursively my-org-directory)))
+
+(setq org-roam-directory (concat my-org-directory "train-of-thought"))
 
 ;; Include org agenda diary
 (setq org-agenda-include-diary t)
@@ -99,7 +101,7 @@
   "Create a new daily journal entry."
   (interactive)
   (setq org-journal-dir (concat my-journal-directory "daily/"))
-  (setq org-journal-date-format "%a %e %b, %Y") ; Daily format: YYYY-MM-DD, Day of the Week
+  (setq org-journal-date-format "%a %e %b, %Y")
   (setq org-journal-file-format "%Y-%m-%d.org")
   (setq org-journal-file-type 'daily)
   (org-journal-new-entry nil))
@@ -108,7 +110,7 @@
   "Create a new weekly journal entry."
   (interactive)
   (setq org-journal-dir (concat my-journal-directory "weekly/"))
-  (setq org-journal-date-format "Week %V, %Y") ; Weekly format: Week <week number>, Year
+  (setq org-journal-date-format "Week %V, %Y")
   (setq org-journal-file-format "%Y-W%V.org")
   (setq org-journal-file-type 'weekly)
   (org-journal-new-entry nil))
@@ -117,7 +119,7 @@
   "Create a new monthly journal entry."
   (interactive)
   (setq org-journal-dir (concat my-journal-directory "monthly/"))
-  (setq org-journal-date-format "%B %Y") ; Monthly format: Month Year
+  (setq org-journal-date-format "%B %Y")
   (setq org-journal-file-format "%Y-%m.org")
   (setq org-journal-file-type 'monthly)
   (org-journal-new-entry nil))
@@ -126,7 +128,7 @@
   "Create a new yearly journal entry."
   (interactive)
   (setq org-journal-dir (concat my-journal-directory "yearly/"))
-  (setq org-journal-date-format "%Y") ; Yearly format: Year
+  (setq org-journal-date-format "%Y")
   (setq org-journal-file-format "%Y.org")
   (setq org-journal-file-type 'yearly)
   (org-journal-new-entry nil))
@@ -408,3 +410,4 @@ name as well to trigger updates"
 ;; Major mode for the hurl restclient
 ;; -----------------------------------------------------------------------------
 (add-to-list 'auto-mode-alist '("\\.hurl\\'" . hurl-mode))
+
