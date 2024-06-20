@@ -69,6 +69,10 @@
 (defvar my-journal-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-notes/journal/"
   "The directory where I store my journal files.")
 
+;; Define a variable to store the directory path for the templates
+(defvar my-templates-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-notes/templates/"
+  "The directory where I store my templates.")
+
 ;; Set the date format for org-journal entries
 (setq org-journal-date-format "%a %e %b, %Y")
 
@@ -104,7 +108,8 @@
   (setq org-journal-date-format "%a %e %b, %Y")
   (setq org-journal-file-format "%Y-%m-%d.org")
   (setq org-journal-file-type 'daily)
-  (org-journal-new-entry nil))
+  (org-journal-new-entry nil)
+  (org-journal-load-template "daily"))
 
 (defun org-journal-weekly-entry ()
   "Create a new weekly journal entry."
@@ -113,7 +118,8 @@
   (setq org-journal-date-format "Week %V, %Y")
   (setq org-journal-file-format "%Y-W%V.org")
   (setq org-journal-file-type 'weekly)
-  (org-journal-new-entry nil))
+  (org-journal-new-entry nil)
+  (org-journal-load-template "weekly"))
 
 (defun org-journal-monthly-entry ()
   "Create a new monthly journal entry."
@@ -122,7 +128,8 @@
   (setq org-journal-date-format "%B %Y")
   (setq org-journal-file-format "%Y-%m.org")
   (setq org-journal-file-type 'monthly)
-  (org-journal-new-entry nil))
+  (org-journal-new-entry nil)
+  (org-journal-load-template "monthly"))
 
 (defun org-journal-yearly-entry ()
   "Create a new yearly journal entry."
@@ -131,7 +138,14 @@
   (setq org-journal-date-format "%Y")
   (setq org-journal-file-format "%Y.org")
   (setq org-journal-file-type 'yearly)
-  (org-journal-new-entry nil))
+  (org-journal-new-entry nil)
+  (org-journal-load-template "yearly"))
+
+(defun org-journal-load-template (type)
+  "Load a template for the journal entry of TYPE."
+  (let ((template-file (concat my-templates-directory type ".org")))
+    (when (file-exists-p template-file)
+      (insert-file-contents template-file))))
 
 (map! :leader
       :desc "Daily journal entry" "n j d" #'org-journal-daily-entry
