@@ -66,11 +66,11 @@
   "The directory where I store my org files.")
 
 ;; Define a variable to store the directory path for the journal files
-(defvar my-journal-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-notes/journal/"
+(defvar my-journal-directory (concat my-org-directory "journal/")
   "The directory where I store my journal files.")
 
 ;; Define a variable to store the directory path for the templates
-(defvar my-templates-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-notes/templates/"
+(defvar my-templates-directory (concat my-org-directory "templates/")
   "The directory where I store my templates.")
 
 ;; Set the date format for org-journal entries
