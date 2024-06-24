@@ -131,6 +131,16 @@
   (org-journal-new-entry nil)
   (org-journal-load-template "monthly"))
 
+(defun org-journal-quarterly-entry ()
+  "Create a new quarterly journal entry."
+  (interactive)
+  (setq org-journal-dir (concat my-journal-directory "quarterly/"))
+  (setq org-journal-date-format "Quarter %q, %Y")
+  (setq org-journal-file-format "%Y-Q%q.org")
+  (setq org-journal-file-type 'quarterly)
+  (org-journal-new-entry nil)
+  (org-journal-load-template "quarterly"))
+
 (defun org-journal-yearly-entry ()
   "Create a new yearly journal entry."
   (interactive)
@@ -151,6 +161,7 @@
       :desc "Daily journal entry" "n j d" #'org-journal-daily-entry
       :desc "Weekly journal entry" "n j w" #'org-journal-weekly-entry
       :desc "Monthly journal entry" "n j m" #'org-journal-monthly-entry
+      :desc "Quarterly journal entry" "n j q" #'org-journal-quarterly-entry
       :desc "Yearly journal entry" "n j y" #'org-journal-yearly-entry)
 
 ;; -----------------------------------------------------------------------------
