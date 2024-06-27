@@ -437,3 +437,8 @@ name as well to trigger updates"
 ;; Major mode for the hurl restclient
 ;; -----------------------------------------------------------------------------
 (add-to-list 'auto-mode-alist '("\\.hurl\\'" . hurl-mode))
+
+;; -----------------------------------------------------------------------------
+;; Path to ob-mermaid package
+;; -----------------------------------------------------------------------------
+(setq ob-mermaid-cli-path "/Users/cristianocarvahlo/.asdf/shims/mmdc")
