@@ -164,6 +164,8 @@
       :desc "Quarterly journal entry" "n j q" #'org-journal-quarterly-entry
       :desc "Yearly journal entry" "n j y" #'org-journal-yearly-entry)
 
+(global-set-key (kbd "C-c r u") 'org-roam-ui-open)
+
 ;; -----------------------------------------------------------------------------
 ;; Line numbers
 ;; -----------------------------------------------------------------------------
@@ -435,4 +437,3 @@ name as well to trigger updates"
 ;; Major mode for the hurl restclient
 ;; -----------------------------------------------------------------------------
 (add-to-list 'auto-mode-alist '("\\.hurl\\'" . hurl-mode))
-
