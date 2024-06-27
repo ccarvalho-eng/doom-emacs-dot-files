@@ -388,7 +388,6 @@
 ;; -----------------------------------------------------------------------------
 ;; Text wrapping
 ;; -----------------------------------------------------------------------------
-
 ;; Set fill-column to a reasonable value
 (setq-default fill-column 80)
 
@@ -402,7 +401,6 @@
 ;; -----------------------------------------------------------------------------
 ;; Multiple cursors keybindings
 ;; -----------------------------------------------------------------------------
-
 (map! :leader
       (:prefix "m"
         :desc "Edit lines" "l" #'mc/edit-lines
@@ -411,7 +409,6 @@
 ;; -----------------------------------------------------------------------------
 ;; Permanently display workspace tabs
 ;; -----------------------------------------------------------------------------
-
 (after! persp-mode
   ;; alternative, non-fancy version which only centers the output of +workspace--tabline
   (defun workspaces-formatted ()
