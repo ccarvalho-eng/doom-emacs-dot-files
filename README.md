@@ -1,3 +1,3 @@
-# Doom Emacs Dot Files
+# Dot Files
 
-Personal settings geared towards the functional language Elixir.
+This repository contains my personal settings to enhance my coding experience.
